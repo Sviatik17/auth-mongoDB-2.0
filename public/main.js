@@ -9,8 +9,10 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         const response = await axios.post('/api/users', userData);
         console.log(response.data);
         alert('Successful registered')
+        
     } catch (e) {
         console.error(`Error: ${e}`);
         alert(`Failed to register user`);
     }
+    document.getElementById('loginForm').reset()
 })
